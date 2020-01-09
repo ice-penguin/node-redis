@@ -1,0 +1,30 @@
+{
+  "name": "node-redis-h",
+  "version": "1.2.0",
+  "description": "基于redis的promise封装",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node test/test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ice-penguin/node-redis.git"
+  },
+  "keywords": [
+    "node",
+    "redis"
+  ],
+  "author": "penguinhj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ice-penguin/node-redis/issues"
+  },
+  "homepage": "https://github.com/ice-penguin/node-redis#readme",
+  "dependencies": {
+    "redis": "^2.8.0"
+  }
+}

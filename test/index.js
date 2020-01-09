@@ -1,26 +1,5 @@
-## 安装
-
-> use npm install
->
-> 使用npm安装
-
-```
-npm install node-redis-h
-```
-
-> [download](<https://github.com/ice-penguin/node_floatobj>) form GitHub
->
-> 从github[下载](<https://github.com/ice-penguin/node_floatobj>)
-
-## Introduce 模块说明
-
-> 对node的redis模块常规方法进行封装，支持promise风格的写法
-
-## Sample example  使用说明 
-
-```
 //初始化连接客户端,ip,端口,连接密码
-var client = require("node-redis-h").init(ip,port,password);
+var client = require("../index").init(ip,port,password);
 
 console.log(client);
 
@@ -104,6 +83,3 @@ client.ltrim('list',0,4)
 .then(function(result){
     console.log("llen",result);
 })
-
-```
-
