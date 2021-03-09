@@ -123,4 +123,22 @@ client.hgetall('testhash')
     console.log("hgetall",result);
 })
 
+// hset 在散列里面关联起给定的键值对 1(新增)/0(更新) hset('hash-key', 'sub-key', 'value') (不支持数组、字符串)
+client.hset('testhash')
+.then(function(result){
+    console.log("hset",result);
+})
+
+// hget 获取指定散列键的值 hget('hash-key', 'sub-key')
+client.hget('testhash')
+.then(function(result){
+    console.log("hget",result);
+})
+
+// hexists 检查给定键是否在散列中 1/0 hexists('hash-key', 'sub-key')
+client.hexists('testhash')
+.then(function(result){
+    console.log("hexists",result);
+})
+
 ```
