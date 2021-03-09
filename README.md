@@ -2,21 +2,21 @@
 
 > use npm install
 >
-> 使用npm安装
+> 使用 npm 安装
 
 ```
 npm install node-redis-h
 ```
 
-> [download](<https://github.com/ice-penguin/node_floatobj>) form GitHub
+> [download](https://github.com/ice-penguin/node_floatobj) form GitHub
 >
-> 从github[下载](<https://github.com/ice-penguin/node_floatobj>)
+> 从 github[下载](https://github.com/ice-penguin/node_floatobj)
 
 ## Introduce 模块说明
 
-> 对node的redis模块常规方法进行封装，支持promise风格的写法
+> 对 node 的 redis 模块常规方法进行封装，支持 promise 风格的写法
 
-## Sample example  使用说明 
+## Sample example 使用说明
 
 ```
 //初始化连接客户端,ip,端口,连接密码
@@ -105,5 +105,22 @@ client.ltrim('list',0,4)
     console.log("llen",result);
 })
 
-```
+// hmset 在一个key中存入一系列键值对
+// hgetall 通过key获取存储着的一系列键值对
 
+client.hmset('testhash',["key4","hhh"])
+.then(function(result){
+    console.log("hmset",result);
+})
+
+client.hmset('testhash',{1:1,2:2})
+.then(function(result){
+    console.log("hmset",result);
+})
+
+client.hgetall('testhash')
+.then(function(result){
+    console.log("hgetall",result);
+})
+
+```
