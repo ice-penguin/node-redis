@@ -39,6 +39,8 @@ var a = {
 // 命令 行为 返回值 使用示例(略去回调函数)
 // set 设置存储在给定键中的值 OK set('key', 'value')
 // get 获取存储在给定键中的值 value/null get('key')
+// mset 获取存储在给定键中的值 value/null mset(['key1',value1,'key2',value2])
+// mget 获取存储在给定键中的值 value/null mget(['key1','key2'])
 // del 删除存储在给定键中的值(任意类型) 1/0 del('key')
 client.set('hello',a)
 .then(function(result){
@@ -46,6 +48,16 @@ client.set('hello',a)
 })
 
 client.get('hello')
+.then(function(result){
+    console.log("get",result);
+})
+
+client.mset(['hello',a,'hello1',a])
+.then(function(result){
+    console.log("set",result);
+})
+
+client.mget(['hello','hello1'])
 .then(function(result){
     console.log("get",result);
 })
