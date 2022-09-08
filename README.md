@@ -130,6 +130,11 @@ client.hmset('testhash',{1:1,2:2})
     console.log("hmset",result);
 })
 
+client.h,get('testhash',["1","2"])
+.then(function(result){
+    console.log("h,get",result);
+})
+
 client.hgetall('testhash')
 .then(function(result){
     console.log("hgetall",result);
