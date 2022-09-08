@@ -130,7 +130,7 @@ client.hmset('testhash',{1:1,2:2})
     console.log("hmset",result);
 })
 
-client.h,get('testhash',["1","2"])
+client.hmget('testhash',["1","2"])
 .then(function(result){
     console.log("h,get",result);
 })
@@ -150,6 +150,12 @@ client.hset('testhash')
 client.hget('testhash')
 .then(function(result){
     console.log("hget",result);
+})
+
+// hdel 删除指定散列键的值 hdel('hash-key', 'sub-key')
+client.hdel('testhash')
+.then(function(result){
+    console.log("hdel",result);
 })
 
 // hexists 检查给定键是否在散列中 1/0 hexists('hash-key', 'sub-key')
