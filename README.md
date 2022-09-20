@@ -152,7 +152,7 @@ client.hget('testhash')
     console.log("hget",result);
 })
 
-// hdel 删除指定散列键的值 hdel('hash-key', 'sub-key')
+//  hdel 删除指定散列键的值 hdel('hash-key', 'sub-key')，删除多个["sub-key",...]
 client.hdel('testhash')
 .then(function(result){
     console.log("hdel",result);
